@@ -1,9 +1,8 @@
 body  {
-    background-image: url(../tulips-on-brights-blue.jpg);
+    background-image: url(../assets/fairy-tale.png);
     background-repeat: no-repeat;
     
     background-size: cover;
-    background-position: center bottom;
 }
 
 body .container {
@@ -13,7 +12,7 @@ body .container {
 
 h1 {
     font-size: 40px;
-    color: rgb(90, 83, 83);
+    color: white;
 }
 
 hr {
