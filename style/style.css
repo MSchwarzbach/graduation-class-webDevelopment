@@ -1,20 +1,21 @@
 body  {
-    background-image: url(../assets/fairy-tale.png);
-    background-repeat: no-repeat;
-    
-    background-size: cover;
+  background-image: url(../assets/fairy-tale.png);
+  background-repeat: no-repeat;
+  
+  background-size: cover;
 }
 
 body .container {
-    text-align: center;
-    margin-top: 150px;    
+  text-align: center;
+  margin-top: 150px;    
 }
 
 h1 {
-    font-size: 40px;
-    color: white;
+  font-size: 40px;
+  color: white;
 }
 
-hr {
-    color: rgb(90, 83, 83);
+p {
+  font-size: 30px;
+  color: white;
 }
