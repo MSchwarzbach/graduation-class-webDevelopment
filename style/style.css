@@ -1,8 +1,5 @@
 body  {
-  background-image: url(../assets/fairy-tale.png);
-  background-repeat: no-repeat;
-  
-  background-size: cover;
+  background-color: rgb(133, 197, 216);
 }
 
 body .container {
@@ -18,4 +15,12 @@ h1 {
 p {
   font-size: 30px;
   color: white;
+}
+
+table {
+  margin-top: 20px;
+}
+
+th, tr {
+  color: rgb(54, 50, 50);
 }
