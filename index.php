@@ -26,13 +26,16 @@ $result = $sql->fetchAll();
   <title> CRUD | Tarefa 5 Desenvolvimento Web </title>
   <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="assets/bootstrap/all.min.css">
-  <link rel="stylesheet" href="assets/svgs">
   <link rel="icon" href="assets/favicon_fox.ico" type="image/x-icon">
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
   <div class="container">
     <h1> Listagem de Clientes </h1>
+
+    <hr>
+
+    <a href="" class="btn btn-primary"> Adicionar Cliente </a>
 
     <table class="table table-striped">
 
