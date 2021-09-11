@@ -1,0 +1,21 @@
+body  {
+    background-image: url(../tulips-on-brights-blue.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    background-position: center bottom;
+}
+
+body .container {
+    text-align: center;
+    margin-top: 150px;    
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(90, 83, 83);
+}
+
+hr {
+    color: rgb(90, 83, 83);
+}
