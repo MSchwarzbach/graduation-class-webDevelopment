@@ -2,7 +2,8 @@
 
 include('infrastructure/index.php');
 
-$sql = $con->prepare('SELECT C.nome AS nome, 
+$sql = $con->prepare('SELECT C.nome AS nome,
+                            C.id as id,
                             C.endereco AS endereco, 
                             C.cep AS cep, 
                             C.telefone_cel AS telefone_cel, 
@@ -35,7 +36,7 @@ $result = $sql->fetchAll();
 
     <hr>
 
-    <a href="" class="btn btn-primary"> Adicionar Cliente </a>
+    <a href="form.php" class="btn btn-primary"> Adicionar Cliente </a>
 
     <table class="table table-striped">
 
@@ -69,9 +70,9 @@ $result = $sql->fetchAll();
           <td> <?php echo strtoupper($r['sexo']) ?> </td>
           <td> <?php echo $r['observacoes'] ?> </td>
           <td>
-            <a href="" class="btn btn-warning">EDITAR</a>
+            <a href="form.php?id=<?php echo $r['id']; ?>" class="btn btn-warning">EDITAR</a>
 
-            <a onclick="return confirm('Deseja excluir?')" href="" class="btn btn-danger">DELETAR</a>
+            <a onclick="return confirm('Deseja excluir?')" href="acao.php?acao=excluir&id=<?php echo $r['id']; ?>" class="btn btn-danger">DELETAR</a>
           </td>
       </tr>
 
