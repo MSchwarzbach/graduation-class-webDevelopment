@@ -6,12 +6,11 @@ This repository has the web development assignment
 
 - Connect to database;
 - List clients;
-
-## WIP:
-
 - Create new client;
 - Delete a client;
 - Edit client;
+
+## WIP:
 
 ## Extras:
 
