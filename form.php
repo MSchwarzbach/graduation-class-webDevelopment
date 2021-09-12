@@ -47,7 +47,7 @@ if (  isset($_GET['id'])  ) {
   $sexo = '';
   $observacoes = '';
   $email = '';
-  $sexo = "Selecione o Sexo";
+  $sexo = "";
 
   $acao = 'inserir';
 
