@@ -66,7 +66,7 @@ if (  isset($_GET['id'])  ) {
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <h1>Yo!</h1>
+  <h3> <?php echo $titulo; ?> Cliente </h3>
   <hr>
   <form method="POST" action="acao.php" class="form-inline" onsubmit="">
 
