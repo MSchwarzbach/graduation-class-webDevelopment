@@ -66,25 +66,30 @@ if (  isset($_GET['id'])  ) {
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <h3> <?php echo $titulo; ?> Cliente </h3>
-  <hr>
-  <form method="POST" action="acao.php" class="form-inline" onsubmit="">
+  <div class="formContainer">
+    <h3> <?php echo $titulo; ?> Cliente </h3>
+    <hr>
+    <form method="POST" action="acao.php" class="form" onsubmit="">
+      <div class="formContent">
+      <input value="<?php echo $id; ?>" type="hidden" name="id">
+      <input value="<?php echo $nome;?>" type="text" placeholder="Nome do cliente" name="nome" class="form-control" maxlength="45" id="nome">
+      <input value="<?php echo $endereco;?>" type="text" placeholder="Endereço" name="endereco" class="form-control" id="endereco">
+      <input value="<?php echo $cep;?>" type="text" placeholder="CEP" name="cep" class="form-control" maxlength="8" id="cep">
+      <input value="<?php echo $telefone_cel;?>" type="text" placeholder="Telefone celular" name="telefone_cel" class="form-control" maxlength="45" id="telefone_cel">
+      <input value="<?php echo $telefone_res;?>" type="text" placeholder="Telefone residencial" name="telefone_res" class="form-control" maxlength="45" id="telefone_res">
+      <input value="<?php echo $email;?>" type="text" placeholder="E-mail" name="email" class="form-control" maxlength="45" id="email">
+      <input value="<?php echo $sexo;?>" type="text" placeholder="Sexo" name="sexo" class="form-control" maxlength="1" id="sexo">
+      <input value="<?php echo $observacoes;?>" type="text" placeholder="Observações" name="observacoes" class="form-control" maxlength="45" id="observacoes">
 
-    <input value="<?php echo $id; ?>" type="hidden" name="id">
-    <input value="<?php echo $nome;?>" type="text" placeholder="Nome do cliente" name="nome" class="form-control" maxlength="45" id="nome">
-    <input value="<?php echo $endereco;?>" type="text" placeholder="Endereço" name="endereco" class="form-control" id="endereco">
-    <input value="<?php echo $cep;?>" type="text" placeholder="CEP" name="cep" class="form-control" maxlength="8" id="cep">
-    <input value="<?php echo $telefone_cel;?>" type="text" placeholder="Telefone celular" name="telefone_cel" class="form-control" maxlength="45" id="telefone_cel">
-    <input value="<?php echo $telefone_res;?>" type="text" placeholder="Telefone residencial" name="telefone_res" class="form-control" maxlength="45" id="telefone_res">
-    <input value="<?php echo $email;?>" type="text" placeholder="E-mail" name="email" class="form-control" maxlength="45" id="email">
-    <input value="<?php echo $sexo;?>" type="text" placeholder="Sexo" name="sexo" class="form-control" maxlength="1" id="sexo">
-    <input value="<?php echo $observacoes;?>" type="text" placeholder="Observações" name="observacoes" class="form-control" maxlength="45" id="observacoes">
+      <input type="hidden" name="acao" value="<?php echo $acao; ?>">
+      <div class="buttonContainer">
+        <a href="index.php" class="btn btn-danger"> Cancelar </a>
+        <button type="submit" class="btn btn-warning"> <?php echo $botao; ?> </button>
+      </div>
+    </div>
+    </form>
 
-    <input type="hidden" name="acao" value="<?php echo $acao; ?>">
-    <button type="submit" class="btn btn-warning"> <?php echo $botao; ?> </button>
-  
-  </form>
-
-  <div class="alert alert-danger hidden" id="erro"></div>
-  <a href="index.php" class="btn btn-success"> Voltar </a>
+    <div class="alert alert-danger hidden" id="erro"></div>
+    
+  </div>
 </body>
