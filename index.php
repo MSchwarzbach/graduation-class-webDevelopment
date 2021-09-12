@@ -25,9 +25,9 @@ $result = $sql->fetchAll();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> CRUD | Tarefa 5 Desenvolvimento Web </title>
-  <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="assets/bootstrap/all.min.css">
   <link rel="icon" href="assets/favicon_fox.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -36,9 +36,9 @@ $result = $sql->fetchAll();
 
     <hr>
 
-    <a href="form.php" class="btn btn-primary"> Adicionar Cliente </a>
+    <a href="form.php" class="btn btn-primary"> <i class="bi bi-plus"></i> Adicionar Cliente </a>
 
-    <table class="table table-striped">
+    <table class="table table-primary table-striped">
 
       <thead>
         <tr>
@@ -69,11 +69,12 @@ $result = $sql->fetchAll();
           <td> <?php echo $r['email'] ?> </td>
           <td> <?php echo strtoupper($r['sexo']) ?> </td>
           <td> <?php echo $r['observacoes'] ?> </td>
-          <td>
-            <a href="form.php?id=<?php echo $r['id']; ?>" class="btn btn-warning">EDITAR</a>
 
-            <a onclick="return confirm('Deseja excluir?')" href="acao.php?acao=excluir&id=<?php echo $r['id']; ?>" class="btn btn-danger">DELETAR</a>
+          <td>
+            <a href="form.php?id=<?php echo $r['id']; ?>" class="btn btn-warning"> <i class="bi bi-pencil" style="color:white"></i> </a>
+            <a onclick="return confirm('Deseja excluir?')" href="action.php?acao=excluir&id=<?php echo $r['id']; ?>" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
           </td>
+
       </tr>
 
       <?php
@@ -81,7 +82,6 @@ $result = $sql->fetchAll();
       ?>
 
       </tbody>
-      
     </table>
   </div>
 </body>

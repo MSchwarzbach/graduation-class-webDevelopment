@@ -50,3 +50,7 @@ form input {
 button {
   width: 100px;
 }
+
+.hidden {
+  display: none!important;
+}

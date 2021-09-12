@@ -51,7 +51,7 @@ if (  isset($_GET['id'])  ) {
 
   $acao = 'inserir';
 
-  $botao = 'Inserir';  
+  $botao = 'Salvar';  
 }
 
 ?>
@@ -61,7 +61,8 @@ if (  isset($_GET['id'])  ) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD | <?php echo $titulo;?> Cliente</title>
-  <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="icon" href="favicon_fox.ico" type="image/x-icon">
   <link rel="stylesheet" href="style/style.css">
 </head>
@@ -69,7 +70,7 @@ if (  isset($_GET['id'])  ) {
   <div class="formContainer">
     <h3> <?php echo $titulo; ?> Cliente </h3>
     <hr>
-    <form method="POST" action="acao.php" class="form" onsubmit="">
+    <form method="POST" action="action.php" class="form" onsubmit="return createCustomer()">
       <div class="formContent">
       <input value="<?php echo $id; ?>" type="hidden" name="id">
       <input value="<?php echo $nome;?>" type="text" placeholder="Nome do cliente" name="nome" class="form-control" maxlength="45" id="nome">
@@ -84,12 +85,14 @@ if (  isset($_GET['id'])  ) {
       <input type="hidden" name="acao" value="<?php echo $acao; ?>">
       <div class="buttonContainer">
         <a href="index.php" class="btn btn-danger"> Cancelar </a>
-        <button type="submit" class="btn btn-warning"> <?php echo $botao; ?> </button>
+        <button type="submit" class="btn btn-warning" style="color:white"> <?php echo $botao; ?> </button>
       </div>
     </div>
     </form>
 
-    <div class="alert alert-danger hidden" id="erro"></div>
+    <div class="hidden" id="erro"></div>
     
   </div>
+
+  <script src="validate.js"></script>
 </body>
